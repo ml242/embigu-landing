@@ -16,14 +16,14 @@
 	</style>
 
 	<script>
-		// Use vanilla javascript to mimic jQuery document.ready
-		document.addEventListener("DOMContentLoaded", function() {
+		
+		function verticalAlign(){
 			var h = window.innerHeight;
 			console.log(h);
 			var intro = document.getElementById('coming-soon').offsetHeight;
 			console.log(intro);
-			document.getElementById("coming-soon").style.marginTop = (h - intro) / 2 + "px";
-		});
+			document.getElementById("coming-soon").style.paddingTop = (h - intro) / 2 + "px";
+		}
 	</script>
 </head>
 <body>
@@ -32,6 +32,15 @@
 		<h1>Fashion For Kids | Coming Soon</h1>
 		<h3>Euphoria Authenticity Openness</h3>
 	</div>
+
+	<script>
+
+		// Use vanilla javascript to mimic jQuery document.ready
+		window.onload = function() {
+			verticalAlign();
+		};
+
+	</script>
 
 </body>	
 </html>
